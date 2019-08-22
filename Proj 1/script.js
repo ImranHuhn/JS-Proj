@@ -1,30 +1,18 @@
-var teamJohn = ( 116 + 94 + 123 ) / 3
-var teamMike = ( 116 + 94 + 123 ) /3
-
-if ( teamJohn > teamMike ) {
-    console.log( "John's team is the winner!" )
-} else if ( teamJohn < teamMike ) {
-    console.log( "Mike's team is the winner!" )
-} else {
-    console.log( "No winner. It's a tie" )
+function tipCalc(bill) {
+    var newBill;
+    if ( bill < 50 ) {
+        newBill = bill * .2;
+    } else if ( bill >= 50 && bill <= 200 ) {
+        newBill = bill * .15;
+    } else {
+        newBill = bill * .1;
+    }
+    return newBill;
 }
 
-console.log( "Here are the results:" )
-console.log( "John's team has " + teamJohn )
-console.log( "Mike's team has " + teamMike )
+var restBill = [ 124 , 48 , 268 ]
+var tip = [tipCalc(restBill[0]) , tipCalc(restBill[1]) , tipCalc(restBill[2])]
+var total = [ tip[0] + restBill[0] , tip[1] + restBill[1] , tip[2] + restBill[2] ]
 
-console.log( "=====================================" )
-
-var teamMary = ( 89 + 120 + 100 ) / 3
-
-console.log( "Mary's team has " + teamMary )
-
-if ( teamMary > teamMike && teamJohn ) {
-    console.log( "Mary's team is the winner" )
-} else if ( teamMary == teamJohn ) {
-    console.log( "Mary's team is tied with John's team" )
-} else if ( teamMary == teamMike ) {
-    console.log( "Mary's team is tied with Mike's team" )
-} else {
-    console.log( "Mary's team did not win" )
-}
+console.log(tip);
+console.log(total);

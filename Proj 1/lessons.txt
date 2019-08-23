@@ -1,0 +1,4 @@
+some js methods/functions:
+.this //pointing to the specific object youre within
+.length //total of the array
+.indexOf //combination of strings to locate within a string

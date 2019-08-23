@@ -54,48 +54,87 @@
 // ======================================
 // ======================================
 
-for (i = 1 ; i <= 3 ; i++) {
+// for (i = 1 ; i <= 3 ; i++) {
+//     console.log(i)
+//     console.log('Imran Huhn')
+// }
+
+// console.log("==================================");
+
+// var fourShows = ['Burn Notice' , 'Grimm' , 'Dragon Ball Z' , 'One Punch Man'];
+// var count = 1
+
+// for (count in fourShows) {
+//     console.log(fourShows[count])
+//     i++;
+// }
+
+// console.log("==================================");
+
+// var burnNotice = {
+//     name: 'Burn Notice',
+//     product: 'DVD',
+//     price: 19.99,
+// }
+
+// var grimm = {
+//     name: 'Grimm',
+//     product: 'BluRay',
+//     price: 24.99,
+// }
+
+// var dragonBallZ = {
+//     name: 'Dragon Ball Z',
+//     product: 'Action Figure',
+//     price: 12.99,
+// }
+
+// var onePunchMan = {
+//     name: 'One Punch Man',
+//     product: 'Manga Book',
+//     price: 14.99,
+// }
+
+// console.log(burnNotice.name + ' '+ burnNotice.product + ' cost ' + burnNotice.price)
+// console.log(grimm.name + ' ' +  grimm.product + ' cost ' + grimm.price)
+// console.log(dragonBallZ.name + ' ' +  dragonBallZ.product + ' cost ' + dragonBallZ.price)
+// console.log(onePunchMan.name + ' ' +  onePunchMan.product + ' cost ' + onePunchMan.price)
+
+
+
+// ======================================
+// ======================================
+// exercise 6
+// ======================================
+// ======================================
+
+// while loops only
+
+var i = -10;
+while (i < 20) {
     console.log(i)
-    console.log('Imran Huhn')
-}
-
-console.log("==================================");
-
-var fourShows = ['Burn Notice' , 'Grimm' , 'Dragon Ball Z' , 'One Punch Man'];
-var count = 1
-
-for (count in fourShows) {
-    console.log(fourShows[count])
     i++;
 }
+console.log('==========================')
 
-console.log("==================================");
-
-var burnNotice = {
-    name: 'Burn Notice',
-    product: 'DVD',
-    price: 19.99,
+i = 10;
+while (i <= 40) {
+    console.log(i)
+    i += 2;
 }
+console.log('==========================')
 
-var grimm = {
-    name: 'Grimm',
-    product: 'BluRay',
-    price: 24.99,
+i = 301;
+while (i <= 333) {
+    console.log(i)
+    i+=2;
 }
+console.log('==========================')
 
-var dragonBallZ = {
-    name: 'Dragon Ball Z',
-    product: 'Action Figure',
-    price: 12.99,
+i = 5;
+while (i <= 50) {
+    if (i % 5 == 0 && i % 3 == 0) {
+        console.log(i)
+    }
+    i++;
 }
-
-var onePunchMan = {
-    name: 'One Punch Man',
-    product: 'Manga Book',
-    price: 14.99,
-}
-
-console.log(burnNotice.name + ' '+ burnNotice.product + ' cost ' + burnNotice.price)
-console.log(grimm.name + ' ' +  grimm.product + ' cost ' + grimm.price)
-console.log(dragonBallZ.name + ' ' +  dragonBallZ.product + ' cost ' + dragonBallZ.price)
-console.log(onePunchMan.name + ' ' +  onePunchMan.product + ' cost ' + onePunchMan.price)

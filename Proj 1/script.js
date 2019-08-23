@@ -179,3 +179,93 @@
 // ======================================
 
 
+// var john = {
+//     name: 'Johnny Be Good',
+//     bill: [124, 48, 268, 180, 42],
+//     tipCalc: function() {
+//         this.tips = []
+//         this.total = []
+//         for (var i = 0 ; i < this.bill.length ; i++) {
+            
+//             var percentage;
+//             var bill = this.bill[i];
+            
+//             if ( bill <= 50 ) {
+//                 percentage = .2;
+//             } else if ( bill > 50 && bill <= 200 ) {
+//                 percentage = .15;
+//             } else {
+//                 percentage = .1;
+//             }
+
+//             this.tips[i] = percentage * bill;
+//             this.total[i] = this.tips[i] + bill;
+
+//         }
+//     }
+// };
+
+
+// john.tipCalc();
+// console.log(john);
+
+// console.log('========================================================');
+
+// var mike = {
+//     name: 'Marky Mark',
+//     bill: [77, 375, 110, 45],
+//     tipCalc: function() {
+//         //rules for percentages
+//         this.tips = [];
+//         this.total = [];
+//         for ( var i = 0; i < this.bill.length; i++) {
+            
+//             var percentage;
+
+//             if (this.bill[i] <= 100 ) {
+//                 percentage = .2;
+//             } else if (this.bill[i] > 100 && this.bill[i] <= 300) {
+//                 percentage = .1;
+//             } else {
+//                 percentage = .25;
+//             }
+
+//             this.tips[i] = percentage * this.bill[i];
+//             this.total[i] = this.tips[i] + this.bill[i]; 
+
+//         }
+//     }
+// }
+
+// mike.tipCalc();
+// console.log(mike);
+
+// console.log('========================================================');
+
+// function calcAvg(tips) {
+//     var sum = 0;
+//     for (var i = 0 ; i < tips.length ; i++) {
+//         sum += tips[i];
+//     }
+//     return sum / tips.length;
+// }
+
+// john.average = calcAvg(john.tips);
+// mike.average = calcAvg(mike.tips);
+
+// if (john.average > mike.average) {
+//     console.log('John paid more tip on average');
+// } else if (john.average < mike.average) {
+//     console.log('Mike paid more tip on average');
+// } else {
+//     console.log('John and Mike paid the same amount of tip, on average');
+// }
+
+
+
+
+// ======================================
+// ======================================
+// exercise 8
+// ======================================
+// ======================================

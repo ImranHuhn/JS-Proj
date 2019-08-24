@@ -266,6 +266,41 @@
 
 // ======================================
 // ======================================
-// exercise 8
+// exercise 9
 // ======================================
 // ======================================
+
+// // pt1
+
+// function isEven(num) {
+//     if (num % 2 == 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// isEven(4);
+// isEven(21);
+// isEven(68);
+// isEven(333);
+
+// // pt2
+
+// var factorial = function(num) { // num = input variable
+//     var result = 1; // result = output variable
+//     for (var i = 1 ; i <= num ; i++) {
+//         result *= i
+//     } 
+//     return result
+// }
+
+
+// // pt3
+
+// function kebabToSnake(str) {
+//     var newStr = str.replace(/-/g, "_")
+//     return newStr
+// }
+
+// // kebabToSnake('hello-world') // in console 

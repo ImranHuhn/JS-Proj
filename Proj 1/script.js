@@ -304,3 +304,74 @@
 // }
 
 // // kebabToSnake('hello-world') // in console 
+
+
+// ======================================
+// ======================================
+// exercise 10
+// ======================================
+// ======================================
+
+//pt1
+
+// function printReverse(array) {
+//     for (var i = array.length - 1 ; i > -1 ; i--) {
+//         console.log(array[i])
+//     }
+// }
+
+// printReverse([1,2,3,4]);
+
+
+//pt2
+
+// function isUniform(arr) {
+
+//     var compare = arr[0]
+
+//     for (var i = 1 ; i < arr.length ; i++) {
+//         if (compare === arr[i]) {
+//             continue'
+//         } else {
+//             console.log("false");
+//             return;
+//         }
+//     } console.log("true");
+// }
+
+// console.log('===================')
+// isUniform([1,1,1,1])
+// console.log('===================')
+// isUniform([2,1,1,1])
+// console.log('===================')
+
+// pt3
+
+// function sumArray(arr) {
+//         var sum = arr[0];
+//     for (var i = 1 ; i < arr.length ; i++) {
+//         sum += arr[i];
+        
+//     }   console.log(sum);
+// }
+
+// sumArray([1,2,3])
+// sumArray([10,3,10,4])
+// sumArray([-5,100])
+
+// pt4
+
+// function max(arr) {
+//     var largest = arr[0];
+//     for (var i = 0 ; i < arr.length ; i++) {
+//         if (largest >= arr[i] ) {
+//             largest;
+//         } else {
+//             largest = arr[i];
+//         }
+//     } console.log(largest)
+// }
+
+// max([1,2,3])
+// max([10,3,10,4])
+// max([-5,100])

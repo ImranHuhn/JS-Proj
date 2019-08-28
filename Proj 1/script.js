@@ -392,7 +392,14 @@
 
 //toggling using DOM manipulation
 
-alert("CONNECTED!");
+// alert("CONNECTED!"); //test
+
+var button = document.querySelector("button");
+
+button.addEventListener("click" , function() {
+    // alert("Clicked!"); //success
+    document.body.style.background="purple";
+});
 
 
 

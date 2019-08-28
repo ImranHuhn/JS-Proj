@@ -394,25 +394,31 @@
 
 // alert("CONNECTED!"); //test
 
-var button = document.querySelector("button");
-var isPurple = false;
+// var button = document.querySelector("button");
+// var isPurple = false;
 
-button.addEventListener("click" , function() {
-    // alert("Clicked!"); //success
+// button.addEventListener("click" , function() {
+//     // alert("Clicked!"); //success
 
-    ////if false, turn purple
-    if (isPurple) {
-        document.body.style.background = "white";
-        isPurple = false;
-    } else {
-        document.body.style.background = "purple";
-        isPurple = true;
-    }
-    ////else, turn white
+//     if (isPurple) {
+//         document.body.style.background = "white";
+//         isPurple = false;
+//     } else {
+//         document.body.style.background = "purple";
+//         isPurple = true;
+//     }
     
-});
+// });
 
 
+
+
+
+// ======================================
+// ======================================
+// mini project
+// ======================================
+// ======================================
 
 
 

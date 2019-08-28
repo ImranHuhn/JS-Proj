@@ -395,10 +395,21 @@
 // alert("CONNECTED!"); //test
 
 var button = document.querySelector("button");
+var isPurple = false;
 
 button.addEventListener("click" , function() {
     // alert("Clicked!"); //success
-    document.body.style.background="purple";
+
+    ////if false, turn purple
+    if (isPurple) {
+        document.body.style.background = "white";
+        isPurple = false;
+    } else {
+        document.body.style.background = "purple";
+        isPurple = true;
+    }
+    ////else, turn white
+    
 });
 
 

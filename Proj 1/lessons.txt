@@ -5,3 +5,7 @@ some js methods:
 
 
 function: type declarations and rules first, then calculations
+
+
+
+you should have the js script tag in the body of the html. right before the closing body tag: </body>. that way, the page can load first then the js

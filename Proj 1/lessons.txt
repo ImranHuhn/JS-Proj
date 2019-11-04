@@ -9,3 +9,18 @@ function: type declarations and rules first, then calculations
 
 
 you should have the js script tag in the body of the html. right before the closing body tag: </body>. that way, the page can load first then the js
+
+
+when targeting an attribute in html, you just add "." and the attribute name
+
+when targeting a property in css, you add ".style." and the property name
+
+before the "=" is how you target what you want to change. after "=" is what you want the result to be.
+
+to remove an active class, first target the class that includes "active". then add ".classList.remove('active')"
+
+to add an active class, first target the class that includes "active". then add ".classList.add('active')"
+
+using an anonymous function in event listener is the common practice way. 
+
+create a declarative function if you are using a block of code for the second time. 

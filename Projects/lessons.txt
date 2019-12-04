@@ -24,3 +24,7 @@ to add an active class, first target the class that includes "active". then add 
 using an anonymous function in event listener is the common practice way. 
 
 create a declarative function if you are using a block of code for the second time. 
+
+***constructor function - variable starts with capital and within the function, statments start with "this."
+
+***iife - used for data privacy

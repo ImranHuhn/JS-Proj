@@ -1,0 +1,17 @@
+<h1>Results Page!</h1>
+
+<ul>
+    <% data.forEach(function(digimon) { %>
+        <li>
+            <strong>
+                <%= digimon["name"] %>
+            </strong>
+            - 
+            <i>
+                <%= digimon["level"] %>
+            </i>
+        </li>
+    <% }) %>
+</ul>
+
+<a href="/">Back to Search</a>

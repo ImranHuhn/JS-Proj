@@ -1,43 +1,73 @@
 const express = require("express");
-const app = express();
-const bodyParser = require("body-parser");
+app = express(),
+bodyParser = require("body-parser"),
+mongoose = require("mongoose");
 
+mongoose.connect("mongodb://localhost/yelp_camp");
 app.use(bodyParser.urlencoded({extended: true}));
-
 app.set("view engine", "ejs");
 
-const campgrounds = [
-    {name: "Salmon Creek", image: "https://pixabay.com/get/57e8dc414e5ba814f6da8c7dda793f7f1636dfe2564c704c7d2e73d39f49c15c_340.jpg"},
-    {name: "Granire Hill", image: "https://pixabay.com/get/57e1d3404e53a514f6da8c7dda793f7f1636dfe2564c704c7d2e73d39f49c15c_340.jpg"},
-    {name: "Mountain Great's Rest", image: "https://pixabay.com/get/5fe3dc46425ab108f5d084609620367d1c3ed9e04e50744174277cdc9349c1_340.jpg"},
-    {name: "Salmon Creek", image: "https://pixabay.com/get/57e8dc414e5ba814f6da8c7dda793f7f1636dfe2564c704c7d2e73d39f49c15c_340.jpg"},
-    {name: "Granire Hill", image: "https://pixabay.com/get/57e1d3404e53a514f6da8c7dda793f7f1636dfe2564c704c7d2e73d39f49c15c_340.jpg"},
-    {name: "Mountain Great's Rest", image: "https://pixabay.com/get/5fe3dc46425ab108f5d084609620367d1c3ed9e04e50744174277cdc9349c1_340.jpg"},
-    {name: "Salmon Creek", image: "https://pixabay.com/get/57e8dc414e5ba814f6da8c7dda793f7f1636dfe2564c704c7d2e73d39f49c15c_340.jpg"},
-    {name: "Granire Hill", image: "https://pixabay.com/get/57e1d3404e53a514f6da8c7dda793f7f1636dfe2564c704c7d2e73d39f49c15c_340.jpg"},
-    {name: "Mountain Great's Rest", image: "https://pixabay.com/get/5fe3dc46425ab108f5d084609620367d1c3ed9e04e50744174277cdc9349c1_340.jpg"}
-];
+const campgroundSchema = new mongoose.Schema({
+    name: String,
+    image: String,
+    description: String
+});
+const Campground = mongoose.model("Campground", campgroundSchema);
+
+// Campground.create(
+//     {
+//         name: "Granire Hill", 
+//         image: "https://cdn.pixabay.com/photo/2017/08/04/20/04/camping-2581242_960_720.jpg",
+//         description: "This is a huge granite hill, no bathrooms. No water. Beatiful granite!"
+//     }, function(err, campground) {
+//         if(err) {
+//             console.log(err);
+//         } else {
+//             console.log("NEWLY CREATED CAMPGROUND:");
+//             console.log(campground);
+//         }
+//     });
 
 app.get("/", function(req, res) {
     res.render("landing");
 });
 
 app.get("/campgrounds", function(req, res) {
-    res.render("campgrounds", {campgrounds: campgrounds})
-});
-
-app.post("/campgrounds", function(req, res) {
-    const name = req.body.name;
-    const image = req.body.name;
-    const newCampground = {name: name, image: image};
-
-    campgrounds.push(newCampground);
-    res.redirect("/campgrounds");
-
+    Campground.find({}, function(err, allCampgrounds) {
+        if(err) {
+            console.log(err);
+        } else {
+            res.render("index", {campgrounds: allCampgrounds})
+        }
+    });
 });
 
 app.get("/campgrounds/new", function(req, res) {
     res.render("new");
+});
+
+app.post("/campgrounds", function(req, res) {
+    const name = req.body.name;
+    const image = req.body.image;
+    const desc = req.body.description;
+    const newCampground = {name: name, image: image, description: desc};
+    Campground.create(newCampground, function(err, newlyCreated) {
+        if(err) {
+            console.log(err);
+        } else {
+            res.redirect("/campgrounds");
+        }
+    });
+});
+
+app.get("/campgrounds/:id", function(req, res) {
+    Campground.findById(req.params.id, function(err, foundCampground) {
+        if(err) {
+            console.log(err);
+        } else {
+            res.render("show", {campground: foundCampground});
+        }
+    });
 });
 
 app.listen(3000, function() {
